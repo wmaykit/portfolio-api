@@ -16,15 +16,12 @@ import kabanyok.artyom.portfolio.projects.corewar.dto.WinningPlayerEvent;
 import kabanyok.artyom.portfolio.projects.corewar.dto.WriteInMemEvent;
 import org.springframework.stereotype.Service;
 
-import javax.annotation.PostConstruct;
 import java.io.IOException;
 import java.io.InputStream;
 import java.nio.ByteBuffer;
 import java.nio.ByteOrder;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Map;
-import java.util.stream.Collectors;
 
 import static kabanyok.artyom.portfolio.projects.corewar.PackageEventCode.END_GAME;
 
