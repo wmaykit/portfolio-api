@@ -32,11 +32,4 @@ public class CorewarController {
     public AsmResult compileAsmCode(@RequestBody AsmRequest asmRequest) {
         return corewarAsmService.asmChampion(asmRequest);
     }
-
-//    @MessageMapping("/corewar")
-//    @SendTo("/topic/corewar_game_result")
-//    public CorewarEvent executeGame() {
-//        return null;
-//    }
-
 }
