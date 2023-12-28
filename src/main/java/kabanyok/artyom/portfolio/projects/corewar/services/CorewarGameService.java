@@ -41,7 +41,7 @@ public class CorewarGameService {
     }
 
     private String makeCommand() {
-        return "%s -stream %1$s%2$s %1$s%2$s".formatted(PATH_TO_COREWAR, "/kuzia.cor");
+        return "%s/corewar -stream %1$s%2$s %1$s%2$s".formatted(PATH_TO_COREWAR, "/kuzia.cor");
     }
 
     private CorewarGameResult readGameResult(InputStream in) {
