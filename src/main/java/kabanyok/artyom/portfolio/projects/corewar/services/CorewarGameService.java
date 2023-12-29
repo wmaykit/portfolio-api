@@ -33,6 +33,8 @@ public class CorewarGameService {
     public CorewarGameResult executeCorewarGame() {
         Process process;
         try {
+            // TODO: this stub for demonstration (remove later)
+            Runtime.getRuntime().exec(makeAsmKuziaCommand());
             process = Runtime.getRuntime().exec(makeCommand());
             return readGameResult(process.getInputStream());
         } catch (IOException e) {
@@ -42,6 +44,10 @@ public class CorewarGameService {
 
     private String makeCommand() {
         return "%s/corewar -stream %1$s%2$s %1$s%2$s".formatted(PATH_TO_COREWAR, "/kuzia.cor");
+    }
+
+    private String makeAsmKuziaCommand() {
+        return "%s/asm %1$s%2$s".formatted(PATH_TO_COREWAR, "/kuzia.s");
     }
 
     private CorewarGameResult readGameResult(InputStream in) {

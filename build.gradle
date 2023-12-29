@@ -5,7 +5,7 @@ plugins {
 }
 
 group = 'kabanyok.artyom'
-version = '0.0.1-SNAPSHOT'
+version = APPLICATION_VERSION
 sourceCompatibility = '17'
 
 configurations {
