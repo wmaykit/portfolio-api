@@ -11,7 +11,7 @@ import static java.util.stream.Collectors.joining;
 
 @Service
 public class PushSwapService {
-    private final String PATH_TO_PUSH_SWAP =  System.getenv("PUSH_SWAP_PATH");;
+    private final String PATH_TO_PUSH_SWAP =  System.getenv("PUSH_SWAP_PATH");
 
     public List<String> executePushSwap(List<Integer> numbers) {
         Process process;
@@ -24,7 +24,7 @@ public class PushSwapService {
     }
 
     private String makeCommand(List<Integer> numbers) {
-        return "%s %s".formatted(PATH_TO_PUSH_SWAP, numbers.stream().map(String::valueOf).collect(joining(" ")));
+        return "%s/push_swap %s".formatted(PATH_TO_PUSH_SWAP, numbers.stream().map(String::valueOf).collect(joining(" ")));
     }
 
     private List<String> readAllLines(BufferedReader bufferedReader) {
